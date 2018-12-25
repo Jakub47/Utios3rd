@@ -118,35 +118,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4880344598703272, guid: 13bf1c8a53b01f34392ff101da258f22,
     type: 2}
   m_PrefabInternal: {fileID: 2144292148}
---- !u!1 &403468701 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1573318442480308, guid: cd420d79873a7684c8f9cf3fd1534a72,
-    type: 2}
-  m_PrefabInternal: {fileID: 1440363033}
---- !u!114 &403468702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 403468701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ddae36e1be93940951fe8b80fe34fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &403468703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 403468701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2658e222b97a874a89e39eb21c500dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerPriorities: 0900000008000000
-  distanceToBackground: 100
 --- !u!4 &421453851 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4880344598703272, guid: 13bf1c8a53b01f34392ff101da258f22,
@@ -614,9 +585,22 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_MovingTurnSpeed
+      value: 3600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_StationaryTurnSpeed
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_AnimSpeedMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114515553392616454, guid: 7737647c22c1fc64a88d5cd030c352ce,
+        type: 2}
+      propertyPath: walkMoveStopRadius
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -671,12 +655,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1516168022935270, guid: 13bf1c8a53b01f34392ff101da258f22, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1481436524810276, guid: 13bf1c8a53b01f34392ff101da258f22, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 23320107034957900, guid: 13bf1c8a53b01f34392ff101da258f22,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 905d4c40a2c4b134ba07f5aca552ab3e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13bf1c8a53b01f34392ff101da258f22, type: 2}
   m_IsPrefabParent: 0
