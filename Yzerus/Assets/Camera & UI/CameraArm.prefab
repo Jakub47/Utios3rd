@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 81822239254873332}
   - component: {fileID: 114458954009866942}
   - component: {fileID: 114795770502315092}
+  - component: {fileID: 114630757093488738}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -42,7 +43,7 @@ GameObject:
   - component: {fileID: 114171993346768548}
   m_Layer: 0
   m_Name: CameraArm
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +140,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ddae36e1be93940951fe8b80fe34fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackCursor: {fileID: 0}
+  WalkCursor: {fileID: 0}
+  UnknownCursor: {fileID: 0}
+  cursorHotspot: {x: 96, y: 96}
+--- !u!114 &114630757093488738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1080789610426378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ddae36e1be93940951fe8b80fe34fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackCursor: {fileID: 2800000, guid: 8e83d798bfd2a784aa075af7450fc6a0, type: 3}
+  WalkCursor: {fileID: 2800000, guid: 7b56dd68ee5f6c34e81d24b8b7e00c2d, type: 3}
+  UnknownCursor: {fileID: 2800000, guid: f2458f1e5c1adc444ae3318d2b051d3a, type: 3}
+  cursorHotspot: {x: 96, y: 96}
 --- !u!114 &114795770502315092
 MonoBehaviour:
   m_ObjectHideFlags: 1
