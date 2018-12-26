@@ -17,7 +17,7 @@ public class CursorAffendence : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void LateUpdate () 
 	{
 		switch (hit.layerHit) 
 		{
@@ -33,5 +33,6 @@ public class CursorAffendence : MonoBehaviour
 			Cursor.SetCursor (UnknownCursor,cursorHotspot, CursorMode.Auto);	
 			return;
 		}
+
 	}
 }
