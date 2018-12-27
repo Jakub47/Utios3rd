@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent (typeof(CameraRaycaster))]
 public class CursorAffendence : MonoBehaviour
 {
 	[SerializeField] Texture2D AttackCursor;
 	[SerializeField] Texture2D WalkCursor;
 	[SerializeField] Texture2D UnknownCursor;
-	[SerializeField] Vector2 cursorHotspot = new Vector2 (96, 96);
+	[SerializeField] Vector2 cursorHotspot = new Vector2 (0, 0);
 	CameraRaycaster hit;
 
 	// Use this for initialization
@@ -19,7 +21,7 @@ public class CursorAffendence : MonoBehaviour
 	// Update is called once per frame
 	void LateUpdate () 
 	{
-		switch (hit.layerHit) 
+		switch (hit.currentLayerHit) 
 		{
 			case Layer.Enemy:
 			Cursor.SetCursor (AttackCursor,cursorHotspot, CursorMode.Auto);		
