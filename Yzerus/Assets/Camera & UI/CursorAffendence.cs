@@ -16,9 +16,36 @@ public class CursorAffendence : MonoBehaviour
 	void Start () 
 	{
 		hit = GetComponent<CameraRaycaster> ();
+		hit.onLayerChange += OnLayerChange;
 	}
-	
-	// Update is called once per frame
+
+	void Update()
+	{
+
+	}
+
+	void OnLayerChange(Layer newLayer)
+	{
+		switch (newLayer) 
+		{
+			case Layer.Enemy:
+			Cursor.SetCursor (AttackCursor, cursorHotspot, CursorMode.Auto);		
+			break;
+			
+			case Layer.Walkable:
+			Cursor.SetCursor (WalkCursor, cursorHotspot, CursorMode.Auto);		
+			break;
+			
+			default:
+			Cursor.SetCursor (UnknownCursor, cursorHotspot, CursorMode.Auto);	
+			return;
+		}
+
+	}
+
+
+	//TODO consider de-registering OnLayerChanged on leaving all game scenes
+	/*
 	void LateUpdate () 
 	{
 		switch (hit.currentLayerHit) 
@@ -35,6 +62,6 @@ public class CursorAffendence : MonoBehaviour
 			Cursor.SetCursor (UnknownCursor,cursorHotspot, CursorMode.Auto);	
 			return;
 		}
+	}*/
 
-	}
 }
