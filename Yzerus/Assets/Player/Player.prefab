@@ -660,6 +660,8 @@ GameObject:
   - component: {fileID: 11444856}
   - component: {fileID: 11469404}
   - component: {fileID: 114515553392616454}
+  - component: {fileID: 114070998135368678}
+  - component: {fileID: 114381260201174958}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2711,6 +2713,35 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149790}
   m_IsPrefabParent: 1
+--- !u!114 &114070998135368678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa05eb32c8f11439c7e5403167928c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+--- !u!114 &114381260201174958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afac0c9965219845a40549872e6c7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthStatus: []
+  healthStatusGUI: {fileID: 0}
+  manaStatus: []
+  manaStatusGUI: {fileID: 0}
+  staminaStatus: []
+  staminaStatusGUI: {fileID: 0}
 --- !u!114 &114515553392616454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2723,3 +2754,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkMoveStopRadius: 0.2
+  attackMoveStopRadius: 5
